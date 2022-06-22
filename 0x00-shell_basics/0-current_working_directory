@@ -1,5 +1,2 @@
 #!/bin/bash
-
-# Prints abolute pathname
-
 echo 'pwd'
