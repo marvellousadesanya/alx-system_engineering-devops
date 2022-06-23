@@ -1,2 +1,2 @@
 #!/bin/bash
-chgrp ug staff vincent
+chown vincent:staff
