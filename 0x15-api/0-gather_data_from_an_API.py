@@ -3,9 +3,10 @@
 import requests
 import sys
 
-" main function to get to do list and users "
+
+"""Get employee todo list"""
 def get_employee_todo_list_progress(employee_id):
-     """
+    """
     This function fetches the TODO list progress for the given employee ID from the REST API
     https://jsonplaceholder.typicode.com/
 
@@ -35,4 +36,6 @@ def get_employee_todo_list_progress(employee_id):
 """
 test with employee id 1
 """
-get_employee_todo_list_progress(sys.argv[1])
+if __name__ == "__main__":
+    # test with employee id from command line argument
+    get_employee_todo_list_progress(int(sys.argv[1]))
