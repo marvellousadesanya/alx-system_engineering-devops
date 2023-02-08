@@ -16,11 +16,11 @@ def get_employee_todo_list_progress(employee_id):
     Returns:
     None
     """
-    employee_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
+    employee_response = requests.get("https://jsonplaceholder.typicode.com/users/{}".format(employee_id))
     employee_name = employee_response.json().get("name")
 
     # get employee todo list
-    todo_response = requests.get(f"https://jsonplaceholder.typicode.com/todos?userId={employee_id}")
+    todo_response = requests.get("https://jsonplaceholder.typicode.com/todos?userId={}".format(employee_id))
     todo_list = todo_response.json()
 
     # count number of completed and total tasks
@@ -29,9 +29,9 @@ def get_employee_todo_list_progress(employee_id):
     completed_tasks_count = len(completed_tasks)
 
     # print progress
-    print(f"Employee {employee_name} is done with tasks({completed_tasks_count}/{total_tasks}):")
+    print("Employee {} is done with tasks({}/{}):".format(employee_name, completed_tasks_count, total_tasks))
     for task in completed_tasks:
-        print(f"\t {task['title']}")
+        print("\t {}".format(task['title']))
 
 """
 test with employee id 1
