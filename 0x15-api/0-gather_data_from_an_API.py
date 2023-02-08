@@ -3,9 +3,7 @@
 import requests
 import sys
 
-# base url of the api
-baseUrl = f"https://jsonplaceholder.typicode.com"
-
+# main function to get to do list and users
 def get_employee_todo_list_progress(employee_id):
     # get employee name
     employee_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
