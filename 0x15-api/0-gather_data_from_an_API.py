@@ -5,8 +5,15 @@ import sys
 
 " main function to get to do list and users "
 def get_employee_todo_list_progress(employee_id):
-    """ 
-    Get employee name
+     """
+    This function fetches the TODO list progress for the given employee ID from the REST API
+    https://jsonplaceholder.typicode.com/
+
+    Arguments:
+    employee_id -- an integer that represents the employee ID
+
+    Returns:
+    None
     """
     employee_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
     employee_name = employee_response.json().get("name")
