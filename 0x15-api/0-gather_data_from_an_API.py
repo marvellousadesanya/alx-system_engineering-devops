@@ -3,9 +3,9 @@
 import requests
 import sys
 
-# main function to get to do list and users
+" main function to get to do list and users "
 def get_employee_todo_list_progress(employee_id):
-    # get employee name
+    " get employee name "
     employee_response = requests.get(f"https://jsonplaceholder.typicode.com/users/{employee_id}")
     employee_name = employee_response.json().get("name")
 
@@ -23,8 +23,5 @@ def get_employee_todo_list_progress(employee_id):
     for task in completed_tasks:
         print(f"\t {task['title']}")
 
-# test with employee id 1
+" test with employee id 1 "
 get_employee_todo_list_progress(sys.argv[1])
-
-
-# print(response.content)
