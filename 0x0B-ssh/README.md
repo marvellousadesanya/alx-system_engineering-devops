@@ -1,1 +1,1 @@
-Learning about SSH
+SSH project
